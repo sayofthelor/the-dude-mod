@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bot.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="robot down0000" x="5" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0001" x="220" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0002" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0003" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0004" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0005" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0006" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0007" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0008" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0009" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0010" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot down0011" x="435" y="5" width="210" height="457"/>
+	<SubTexture name="robot idle0000" x="650" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0001" x="853" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0002" x="1056" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0003" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0004" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0005" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0006" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0007" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0008" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0009" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0010" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0011" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0012" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot idle0013" x="1259" y="5" width="198" height="461"/>
+	<SubTexture name="robot left0000" x="1462" y="5" width="203" height="458"/>
+	<SubTexture name="robot left0001" x="1670" y="5" width="203" height="458"/>
+	<SubTexture name="robot left0002" x="5" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0003" x="5" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0004" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0005" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0006" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0007" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0008" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0009" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0010" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot left0011" x="213" y="471" width="203" height="458"/>
+	<SubTexture name="robot right0000" x="421" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0001" x="665" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0002" x="909" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0003" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0004" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0005" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0006" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0007" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0008" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0009" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0010" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot right0011" x="1153" y="471" width="239" height="458"/>
+	<SubTexture name="robot up0000" x="1397" y="471" width="242" height="471"/>
+	<SubTexture name="robot up0001" x="1644" y="471" width="242" height="471"/>
+	<SubTexture name="robot up0002" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0003" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0004" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0005" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0006" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0007" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0008" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0009" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0010" x="5" y="947" width="242" height="471"/>
+	<SubTexture name="robot up0011" x="5" y="947" width="242" height="471"/>
+</TextureAtlas>
