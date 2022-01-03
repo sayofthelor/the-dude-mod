@@ -30,10 +30,12 @@ using StringTools;
 // TO DO: Redo the menu creation system for not being as dumb
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Notes', 'Controls', 'Preferences'];
+	var options:Array<String> = ['Offsets', 'Controls', 'Preferences'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
+	var selectorLeft:Alphabet;
+	var selectorRight:Alphabet;
 
 	override function create() {
 		#if desktop
@@ -54,10 +56,17 @@ class OptionsState extends MusicBeatState
 		for (i in 0...options.length)
 		{
 			var optionText:Alphabet = new Alphabet(0, 0, options[i], true, false);
-			optionText.screenCenter();
+			optionText.x=128;
+			optionText.screenCenter(Y);
 			optionText.y += (100 * (i - (options.length / 2))) + 50;
 			grpOptions.add(optionText);
 		}
+
+		selectorLeft = new Alphabet(0, 0, '>', true, false);
+		add(selectorLeft);
+		selectorRight = new Alphabet(0, 0, '<', true, false);
+		add(selectorRight);
+
 		changeSelection();
 
 		super.create();
@@ -90,8 +99,8 @@ class OptionsState extends MusicBeatState
 			}
 
 			switch(options[curSelected]) {
-				case 'Notes':
-					openSubState(new NotesSubstate());
+				case 'Offsets':
+					LoadingState.loadAndSwitchState(new NoteOffsetState());
 
 				case 'Controls':
 					openSubState(new ControlsSubstate());
@@ -118,6 +127,10 @@ class OptionsState extends MusicBeatState
 			item.alpha = 0.6;
 			if (item.targetY == 0) {
 				item.alpha = 1;
+				selectorLeft.x = item.x - 63;
+				selectorLeft.y = item.y;
+				selectorRight.x = item.x + item.width + 15;
+				selectorRight.y = item.y;
 			}
 		}
 	}
@@ -155,7 +168,7 @@ class NotesSubstate extends MusicBeatSubstate
 			}
 
 			var note:FlxSprite = new FlxSprite(posX - 70, yPos);
-			note.frames = Paths.getSparrowAtlas('NOTE_assets');
+			note.frames = Paths.getSparrowAtlas('NotesBF');
 			switch(i) {
 				case 0:
 					note.animation.addByPrefix('idle', 'purple0');
