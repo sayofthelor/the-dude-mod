@@ -22,8 +22,7 @@ class StrumNote extends FlxSprite
 		this.noteData = leData;
 		super(x, y);
 
-		var skin:String;
-		skin=noteSkin;
+		var skin:String = noteSkin;
 		if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1) skin = PlayState.SONG.arrowSkin;
 
 		if(PlayState.isPixelStage)

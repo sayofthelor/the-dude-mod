@@ -62,6 +62,7 @@ class Note extends FlxSprite
 	public var hitHealth:Float = 0.023;
 	public var missHealth:Float = 0.0475;
 	public var noteSkeen:String="NOTE_assets";
+	public var inEdit:Bool=false;
 
 	public var texture(default, set):String = null;
 
@@ -105,10 +106,11 @@ class Note extends FlxSprite
 		return value;
 	}
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?noteSkin:String)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?noteSkin:String = "NOTE_assets_3d")
 	{
 		super();
 		noteSkeen=noteSkin;
+		inEdit=inEditor;
 		if (prevNote == null)
 			prevNote = this;
 
@@ -216,7 +218,7 @@ class Note extends FlxSprite
 		
 		var skin:String = texture;
 		if(texture.length < 1) {
-			skin = noteSkeen;
+			if (inEdit==true) skin="NOTE_assets" else skin = noteSkeen;
 		}
 
 		var animName:String = null;

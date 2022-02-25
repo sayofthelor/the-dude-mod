@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_pico-8.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pico-8 basic0000" x="0" y="0" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0001" x="0" y="0" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0002" x="0" y="0" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0003" x="386" y="0" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0004" x="386" y="0" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0005" x="386" y="0" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0006" x="0" y="150" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0007" x="0" y="150" width="381" height="145"/>
+	<SubTexture name="pico-8 basic0008" x="0" y="150" width="381" height="145"/>
+	<SubTexture name="pico-8 white0000" x="386" y="150" width="520" height="198"/>
+	<SubTexture name="pico-8 white0001" x="0" y="353" width="520" height="198"/>
+	<SubTexture name="pico-8 white0002" x="0" y="556" width="520" height="198"/>
+</TextureAtlas>
