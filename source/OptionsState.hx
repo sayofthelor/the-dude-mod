@@ -56,15 +56,17 @@ class OptionsState extends MusicBeatState
 		for (i in 0...options.length)
 		{
 			var optionText:Alphabet = new Alphabet(0, 0, options[i], true, false);
-			optionText.x=128;
+			optionText.x = 72;
 			optionText.screenCenter(Y);
 			optionText.y += (100 * (i - (options.length / 2))) + 50;
 			grpOptions.add(optionText);
 		}
 
 		selectorLeft = new Alphabet(0, 0, '>', true, false);
+		selectorLeft.alpha = 0.75;
 		add(selectorLeft);
 		selectorRight = new Alphabet(0, 0, '<', true, false);
+		selectorRight.alpha = 0.75;
 		add(selectorRight);
 
 		changeSelection();
@@ -97,7 +99,8 @@ class OptionsState extends MusicBeatState
 			for (item in grpOptions.members) {
 				item.alpha = 0;
 			}
-
+			selectorLeft.alpha = 0;
+			selectorRight.alpha = 0;
 			switch(options[curSelected]) {
 				case 'Offsets':
 					LoadingState.loadAndSwitchState(new NoteOffsetState());
@@ -127,6 +130,8 @@ class OptionsState extends MusicBeatState
 			item.alpha = 0.6;
 			if (item.targetY == 0) {
 				item.alpha = 1;
+				selectorLeft.alpha = .75;
+				selectorRight.alpha = .75;
 				selectorLeft.x = item.x - 63;
 				selectorLeft.y = item.y;
 				selectorRight.x = item.x + item.width + 15;

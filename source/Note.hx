@@ -106,7 +106,7 @@ class Note extends FlxSprite
 		return value;
 	}
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?noteSkin:String = "NOTE_assets_3d")
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?noteSkin:String = "NOTE_assets")
 	{
 		super();
 		noteSkeen=noteSkin;

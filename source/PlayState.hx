@@ -261,6 +261,7 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		rankShow = false;
 		#if MODS_ALLOWED
 		Paths.destroyLoadedImages(resetSpriteCache);
 		#end
