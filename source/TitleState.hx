@@ -158,17 +158,17 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(140);
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		var bg:FlxSprite = new FlxSprite(-200, -100, Paths.image('titlebg'));
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(-150, -100);
+		logoBl = new FlxSprite(0, 0);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
-		logoBl.animation.play('bump');
+		logoBl.animation.play('bump', false);
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
@@ -309,8 +309,10 @@ class TitleState extends MusicBeatState
 
 				transitioning = true;
 				// FlxG.sound.music.stop();
-
-				new FlxTimer().start(1, function(tmr:FlxTimer)
+				FlxTween.tween(logoBl, {x:-850}, 2, {ease: FlxEase.quintInOut});
+				FlxTween.tween(gfDance, {x:1380}, 2, {ease: FlxEase.quintInOut});
+				FlxTween.tween(titleText, {y:820}, 2, {ease: FlxEase.quintInOut});
+				new FlxTimer().start(1.8, function(tmr:FlxTimer)
 				{
 					MusicBeatState.switchState(new MainMenuState());
 					closedState = true;
@@ -413,8 +415,8 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-		if(logoBl != null) 
-			logoBl.animation.play('bump');
+		if(logoBl != null && curBeat % 2 == 0) 
+			logoBl.animation.play('bump', false);
 
 		if(gfDance != null) {
 			danceLeft = !danceLeft;
@@ -490,7 +492,7 @@ class TitleState extends MusicBeatState
 		{
 			remove(logoSpr);
 
-			FlxG.camera.flash(FlxColor.WHITE, 4);
+			FlxG.camera.flash(FlxColor.WHITE, 1);
 			remove(credGroup);
 			skippedIntro = true;
 		}
